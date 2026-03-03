@@ -1,0 +1,130 @@
+body { 
+  background: url('https://plus.unsplash.com/premium_photo-1681426678542-613c306013e1?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bW9sZWN1bGFyJTIwc3RydWN0dXJlfGVufDB8fDB8fHww') 
+              no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Inter', -apple-system, sans-serif; 
+  padding: 25px; 
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.card { 
+  border-radius: 14px; 
+  border: none; 
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07); 
+  overflow: hidden; 
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1), box-shadow 0.4s ease; 
+  animation: slideUp 0.8s ease-out; 
+  backdrop-filter: blur(12px); /* Makes cards pop on image background */
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.card:hover { 
+  transform: translateY(-8px) scale(1.02); 
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15); 
+}
+
+.card-header { 
+  background: linear-gradient(135deg, #0bab64 0%, #3bb78f 50%, #f1c40f 100%);
+  border-bottom: none; 
+  padding: 1.6rem; 
+  color: #fff; 
+  background-size: 200% 200%; 
+  animation: gradientMove 5s ease infinite;
+}
+
+.card-header h2 { 
+  font-weight: 800; 
+  letter-spacing: -0.5px; 
+  font-size: 2.2rem; 
+  animation: fadeInUp 1s ease; 
+}
+
+.card-header h3 { 
+  font-weight: 700; 
+  letter-spacing: -0.3px; 
+}
+
+.card-body { 
+  padding: 2.2rem; 
+}
+
+.form-control { 
+  border-radius: 10px; 
+  border: 1px solid #d4f3e6; 
+  padding: 14px; 
+  background-color: #eafff4; 
+  transition: all 0.3s ease; 
+}
+
+.form-control:focus { 
+  border-color: #0bab64; 
+  box-shadow: 0 0 0 4px rgba(11, 171, 100, 0.15); 
+  background-color: #fff; 
+  transform: scale(1.02); 
+}
+
+.btn-primary { 
+  background: linear-gradient(135deg, #0f9b8e 0%, #2ca8c2 50%, #38ef7d 100%);
+  border: none; 
+  padding: 14px; 
+  font-size: 1.1rem; 
+  font-weight: 600; 
+  letter-spacing: 0.3px; 
+  border-radius: 10px; 
+  text-transform: uppercase; 
+  transition: all 0.4s ease; 
+  background-size: 200% 200%; 
+  animation: gradientMove 6s ease infinite; 
+  color: white;
+}
+
+.btn-primary:hover { 
+  transform: translateY(-3px) scale(1.05); 
+  box-shadow: 0 8px 20px rgba(47, 178, 164, 0.4); 
+}
+
+.card:nth-child(2) .card-header { 
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 50%, #f6d365 100%);
+  background-size: 200% 200%; 
+  animation: gradientMove 5s ease infinite; 
+}
+
+.result-value { 
+  color: #0a3d2e; 
+  font-weight: 700; 
+  font-size: 1.2rem; 
+  animation: popIn 0.6s ease; 
+}
+
+/* Animations */
+@keyframes gradientMove { 
+  0% { background-position: 0% 50%; } 
+  50% { background-position: 100% 50%; } 
+  100% { background-position: 0% 50%; } 
+}
+
+@keyframes fadeIn { 
+  from { opacity: 0; } 
+  to { opacity: 1; } 
+}
+
+@keyframes slideUp { 
+  from { transform: translateY(20px); opacity: 0; } 
+  to { transform: translateY(0); opacity: 1; } 
+}
+
+@keyframes fadeInUp { 
+  from { transform: translateY(15px); opacity: 0; } 
+  to { transform: translateY(0); opacity: 1; } 
+}
+
+@keyframes popIn { 
+  0% { transform: scale(0.8); opacity: 0; } 
+  100% { transform: scale(1); opacity: 1; } 
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) { 
+  .card-header h2 { font-size: 1.8rem; } 
+  .card-body { padding: 1.8rem; } 
+}
